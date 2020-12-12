@@ -8,15 +8,15 @@ DRAW = "Great minds think a like!"
 # Random choice number and word conversion functions
 def computer_conversion(num):
     text = ["Rock!", "Paper!", "Scissors!"]
-    print(text[num - 1])
+    print(text[num])
 
 def user_conversion(word):
     if word.lower() in ['rock', 'r']:
-        return 1
+        return 0
     elif word.lower() in ['paper', 'p']:
-        return 2
+        return 1
     elif word.lower() in ['scissors', 's']:
-        return 3
+        return 2
 
 def win(computerChoice, userResult):
     if computerChoice == userResult:
@@ -32,7 +32,7 @@ def gameLoop():
         userChoice = input("Rock, paper... scissors! ")
         userResult = user_conversion(userChoice)
 
-        computerChoice = random.randint(1,3)
+        computerChoice = random.randint(0,2)
         computer_conversion(computerChoice)
 
         winner = win(computerChoice, userResult)
