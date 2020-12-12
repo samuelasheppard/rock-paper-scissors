@@ -22,7 +22,7 @@ def win(computerChoice, userResult):
     if computerChoice == userResult:
         return DRAW
     elif computerChoice == 1:
-        return WINNER if userResult == 3 else LOSER
+        return WINNER if userResult == 2 else LOSER
     elif computerChoice == 2:
         return WINNER if userResult == 3 else LOSER
     elif computerChoice == 3:
