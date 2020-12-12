@@ -21,12 +21,7 @@ def user_conversion(word):
 def win(computerChoice, userResult):
     if computerChoice == userResult:
         return DRAW
-    elif computerChoice == 1:
-        return WINNER if userResult == 2 else LOSER
-    elif computerChoice == 2:
-        return WINNER if userResult == 3 else LOSER
-    elif computerChoice == 3:
-        return WINNER if userResult == 1 else LOSER
+    return WINNER if (computerChoice + 1) % 3 == userResult else LOSER
 
 # Game loop
 def gameLoop():
